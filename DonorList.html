@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<head>
+	<link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor Darah || Donor List</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/Pmi.png" type="image/x-icon" />
+	<!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a {
+  float: right;
+  font-size: 21px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.dropdown {
+  float: right;
+  overflow: hidden;
+  font-size: 21px;
+  font-weight: bold;
+}
+.dropdown .dropbtn {
+  font-size: 21px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: inherit;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*
+=============== 
+table
+===============
+*/
+#donor {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 5px;
+  text-align: center;
+}
+#donor td, #donor th {
+  border: 1px solid #ddd;
+  padding: 18px;
+}
+#donor tr:nth-child(even){background-color: #f2f2f2;}
+#donor tr:hover {background-color: #ddd;}
+#donor th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: red;
+  color: white;
+}
+</style>	
+</head>
+<body>
+<!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="Beranda.html" class="nav-logo">
+            <img src="img/blood-donation.svg" alt="" WIDTH=100 HEIGHT=80/>
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="Beranda.html" class="nav-link"> Beranda </a>
+          <a href="About.html" class="nav-link"> Tentang </a>
+		  <div class="dropdown">
+			<button class="dropbtn">Selengkapnya
+			<i class="fa fa-caret-down"></i>
+			</button>
+		<div class="dropdown-content">
+		<a href="reg.php">Daftar sebagai Pendonor</a>
+		</div>
+		</div>
+		  
+          <div class="nav-link contact-link">
+			<a href="Login.html" class="nav-active">Akun Admin </a>
+          </div> 
+        </div>
+      </div>
+    </nav>
+	 <!-- end of nav -->
+	 <!--Show Dashboard-->
+	<div class="image">
+		<img src="img/show.png" alt="" WIDTH=1263 HEIGHT=400/>
+	</div>
+	<!--End of Show Dashboard-->
+	<b><h3 align="center">Donor List</b></h3>
+	<br>
+  <table id="donor" style="margin: 0px auto;font-size:15px">
+  <tr>
+	<th>ID</th>
+    <th>Nama</th>
+    <th>Jenis Kelamin</th>
+	<th>Usia</th>
+	<th>HB</th>
+	<th>Tensi</th>
+	<th>Berat Badan</th>
+	<th>Donasi Terakhir</th>
+	<th>Hasil</th>
+  </tr>
+  <tr>
+	<td>3275DGD01</td>
+	<td>Kiana Rizki Tsaniyah</td>
+	<td>Perempuan</td>
+	<td>20</td>
+	<td>14,2</td>
+	<td>120/80</td>
+	<td>50</td>
+	<td>7/12/2021</td>
+	<td>Berhasil</td>
+  </tr>
+  <tr>
+	<td>3275ERF03</td>
+	<td>Claudia Amanda</td>
+	<td>Perempuan</td>
+	<td>25</td>
+	<td>15</td>
+	<td>120/70</td>
+	<td>70</td>
+	<td>12/12/2019</td>
+	<td>Berhasil</td>
+  </tr>
+  <tr>
+	<td color="red">3275MUH03</td>
+	<td>Jason Putra</td>
+	<td>Laki-laki</td>
+	<td>42</td>
+	<td>17,6</td>
+	<td>140/90</td>
+	<td>88</td>
+	<td>13/10/2019</td>
+	<td>Gagal</td>
+  </tr>
+</table> 
+<!-- footer -->
+	<footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">Donor Darah</span> UAS
+        <a href="https://fik.upnvj.ac.id//">Projek Perangkat Lunak</a>
+      </p>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>
